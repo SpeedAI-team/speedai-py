@@ -3,15 +3,12 @@ name: Publish Python SDK to PyPI
 on:
   push:
     tags:
-      - 'python-sdk-v*'  # Trigger on tags like python-sdk-v1.0.0
+      - 'v*'  # Trigger on version tags like v1.0.0
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./python-sdk
     
     steps:
     - uses: actions/checkout@v3
