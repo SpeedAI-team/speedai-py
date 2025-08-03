@@ -30,13 +30,6 @@ jobs:
     - name: Check package
       run: twine check dist/*
     
-    - name: Publish to Test PyPI
-      env:
-        TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
-      run: |
-        twine upload --repository testpypi dist/*
-      continue-on-error: true  # Continue even if test upload fails
     
     - name: Publish to PyPI
       if: startsWith(github.ref, 'refs/tags/')  # Only on tagged releases
