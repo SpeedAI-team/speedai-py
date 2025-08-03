@@ -79,7 +79,6 @@ result = client.rewrite_text(
 
 print(f"Original: {result.original}")
 print(f"Processed: {result.processed}")
-print(f"Characters: {result.characters}")
 ```
 
 #### Reduce AI Detection (降AIGC)
@@ -318,5 +317,5 @@ MIT License
 ## Support
 
 For issues and feature requests, please visit:
-- GitHub Issues: https://github.com/yourusername/speedai/issues
-- Documentation: https://github.com/yourusername/speedai/wiki
+- GitHub Issues: https://github.com/SpeedAI-team/speedai-py/issues
+- Documentation: https://github.com/SpeedAI-team/speedai-py/wiki
